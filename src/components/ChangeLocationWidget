@@ -1,0 +1,19 @@
+import React from 'react'
+
+const ChangeLocationWidget = (props) => (
+	<form onSubmit={(event) => {
+		event.preventDefault()
+
+		let userInput = event.target.location.value
+
+		props.changeLocation(userInput)
+	}}>
+
+		<input type="text" name="location" />
+		<button type="submit">Submit</button>
+
+	</form>
+
+	)
+
+export default ChangeLocationWidget
